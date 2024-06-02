@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Main from './Layouts/Main'
+import styles from './Promo1.module.css'
 
 const BaseUrl = import.meta.env.VITE_BASE_URL
 
@@ -55,7 +56,7 @@ function Promo2() {
 
   return (
     <Main>
-      <div className="promo1">
+      <div className={styles.promo1}>
         <h1>Скидочная карта 15% </h1>
         <b> Кол-во переходов : {data && data[0]['count']} </b>
         <div className="btns">
