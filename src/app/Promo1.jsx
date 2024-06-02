@@ -55,7 +55,7 @@ function Promo1() {
       <div className={styles.promo1}>
         <h1>School House 15%</h1>
 
-        <b> Кол-во переходов : {data > 0 && data[1]['count']} </b>
+        <b> Кол-во переходов : {data && data[1]['count']} </b>
         <div className="btns">
           <button className="btn" onClick={() => countSchoolHouse(-1)}>
             -
