@@ -4,8 +4,6 @@ import styles from './Promo1.module.css'
 
 const BaseUrl = import.meta.env.VITE_BASE_URL
 
-const updateUrl = 'http://localhost:8000/schoolhouse/update'
-
 function Promo1() {
   const [data, setData] = useState()
 
@@ -26,7 +24,7 @@ function Promo1() {
 
   const countSchoolHouse = async (count) => {
     try {
-      const response = await fetch(updateUrl, {
+      const response = await fetch(BaseUrl + 'update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,8 +39,7 @@ function Promo1() {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      const data = await response.json()
-      console.log(data)
+      await response.json()
 
       await fetchData()
     } catch (error) {
