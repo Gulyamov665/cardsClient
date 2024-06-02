@@ -57,7 +57,7 @@ function Promo2() {
     <Main>
       <div className={styles.promo1}>
         <h1>Скидочная карта 15% </h1>
-        <b> Кол-во переходов : {data > 0 && data[0]['count']} </b>
+        <b> Кол-во переходов : {data && data[0]['count']} </b>
         <div className="btns">
           <button className="btn" onClick={() => countSchoolHouse(-1)}>
             -
